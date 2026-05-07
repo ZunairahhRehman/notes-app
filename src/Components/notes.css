@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+} /* CREATE NOTE SECTION  */
+
+.create-note {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  margin: 20px;
+}
+
+/* TEXTAREA INPUT */
+.note-input {
+  width: 100%;
+  min-height: 120px;
+  max-height: 300px;
+
+  padding: 14px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+
+  outline: none;
+  resize: none;
+  overflow: hidden;
+
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: 0.2s ease;
+}
+
+.note-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.note-input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* NOTES GRID */
+
+.notes_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+
+  align-items: start;
+}
+/* NOTE CARD  */
+
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 180px;
+  padding: 15px;
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  overflow: hidden;
+
+  gap: 10px;
+
+  transition: 0.2s ease;
+}
+
+.note:hover {
+  transform: translateY(-3px);
+}
+
+/* NOTE TEXT */
+.note-body {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* FOOTER (BUTTONS) */
+
+.note_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* SAVE / BUTTON */
+.note_save {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  color: white;
+
+  padding: 6px 14px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.note_save:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.note textarea {
+  width: 100%;
+  min-height: 80px;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: white;
+  font-size: 15px;
+  line-height: 1.5;
+
+  resize: none;
+  overflow: hidden;
+}
